@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
 
         backgroundColor: BGColor,
         centerTitle: true,
-        title: Text('Login'),
+        title: const Text('Login'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -22,63 +22,63 @@ class LoginScreen extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'Enter Email',
-                suffixIcon: Icon(Icons.email_outlined,color: BGColor,),
+                suffixIcon: const Icon(Icons.email_outlined,color: BGColor,),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Color(0xffA2B5BB),
                   )
                 ),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: BGColor,
                     )
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
                 hintText: 'Enter Password',
-                suffixIcon: Icon(Icons.lock_open,color: BGColor,),
+                suffixIcon: const Icon(Icons.lock_open,color: BGColor,),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0xffA2B5BB),
                     )
                 ),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: BGColor,
                     )
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
 
             ButtonDesign(btnText: 'Login',),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account yet?"),
-                SizedBox(
+                const Text("Don't have an account yet?"),
+                const SizedBox(
                   width: 5,
                 ),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpScreen()));
                   },
-                    child: Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
+                    child: const Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
               ],
             ),
           ],

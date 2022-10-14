@@ -9,11 +9,11 @@ class ButtonDesign extends StatelessWidget {
     return Container(
       width: 200,
       height: 50,
-      child: Center(child: Text(btnText,style: TextStyle(color: Colors.white,fontSize: 20),)),
       decoration: BoxDecoration(
         color: BGColor,
         borderRadius: BorderRadius.circular(15),
       ),
+      child: Center(child: Text(btnText,style: TextStyle(color: Colors.white,fontSize: 20),)),
     );
   }
 }

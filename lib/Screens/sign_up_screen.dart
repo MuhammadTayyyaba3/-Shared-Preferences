@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preference/Components/button_compo.dart';
 import 'package:shared_preference/constants.dart';
 class SignUpScreen extends StatelessWidget {
-  SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class SignUpScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: BGColor,
         centerTitle: true,
-        title: Text('Regitration'),
+        title: const Text('Registration'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -21,85 +21,85 @@ class SignUpScreen extends StatelessWidget {
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Name',
-                  suffixIcon: Icon(Icons.account_circle_rounded,color: BGColor,),
+                  suffixIcon: const Icon(Icons.account_circle_rounded,color: BGColor,),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffA2B5BB),
                       )
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: BGColor,
                       )
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Father Name',
-                  suffixIcon: Icon(Icons.supervisor_account,color: BGColor,),
+                  suffixIcon: const Icon(Icons.supervisor_account,color: BGColor,),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffA2B5BB),
                       )
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: BGColor,
                       )
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Enter Email',
-                  suffixIcon: Icon(Icons.email_outlined,color: BGColor,),
+                  suffixIcon: const Icon(Icons.email_outlined,color: BGColor,),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffA2B5BB),
                       )
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: BGColor,
                       )
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Enter Password',
-                  suffixIcon: Icon(Icons.lock_open,color: BGColor,),
+                  suffixIcon: const Icon(Icons.lock_open,color: BGColor,),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xffA2B5BB),
                       )
                   ),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: BGColor,
                       )
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
 
@@ -112,25 +112,25 @@ class SignUpScreen extends StatelessWidget {
                         lastDate: DateTime.now()
                     );
                   },
-                  child: Icon(Icons.calendar_today_outlined)),
-              SizedBox(
+                  child: const Icon(Icons.calendar_today_outlined)),
+              const SizedBox(
                 height: 30,
               ),
 
               ButtonDesign(btnText: 'Login',),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account yet?"),
-                  SizedBox(
+                  const Text("Don't have an account yet?"),
+                  const SizedBox(
                     width: 5,
                   ),
                   InkWell(
                       onTap: (){},
-                      child: Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
+                      child: const Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
                 ],
               ),
             ],
