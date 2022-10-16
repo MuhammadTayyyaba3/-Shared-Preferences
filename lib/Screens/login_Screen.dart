@@ -14,74 +14,85 @@ class LoginScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text('Login'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextFormField(
-              decoration: InputDecoration(
-                hintText: 'Enter Email',
-                suffixIcon: const Icon(Icons.email_outlined,color: BGColor,),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(
-                    color: Color(0xffA2B5BB),
-                  )
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(
-                      color: BGColor,
-                    )
-                ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:  EdgeInsets.fromLTRB(10,50,10,00),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              
+              CircleAvatar(
+                backgroundColor: BGColor,
+                child: Icon(Icons.account_circle_rounded,size: 100,),
+                radius: 50,
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'Enter Password',
-                suffixIcon: const Icon(Icons.lock_open,color: BGColor,),
-                enabledBorder: OutlineInputBorder(
+              SizedBox(
+                height: 50,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Enter Email',
+                  suffixIcon: const Icon(Icons.email_outlined,color: BGColor,),
+                  enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
                       color: Color(0xffA2B5BB),
                     )
-                ),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: const BorderSide(
-                      color: BGColor,
-                    )
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: BGColor,
+                      )
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-
-            ButtonDesign(btnText: 'Login',),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Don't have an account yet?"),
-                const SizedBox(
-                  width: 5,
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Enter Password',
+                  suffixIcon: const Icon(Icons.lock_open,color: BGColor,),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: Color(0xffA2B5BB),
+                      )
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: const BorderSide(
+                        color: BGColor,
+                      )
+                  ),
                 ),
-                InkWell(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpScreen()));
-                  },
-                    child: const Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
-              ],
-            ),
-          ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+
+              ButtonDesign(btnText: 'Login',),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account yet?"),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpScreen()));
+                    },
+                      child: const Text('Sign up',style: TextStyle(color: BGColor,fontSize: 16),))
+                ],
+              ),
+            ],
+          ),
         ),
       ),
 

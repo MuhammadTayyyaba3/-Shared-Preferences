@@ -104,6 +104,7 @@ class SignUpScreen extends StatelessWidget {
               ),
 
               TextButton(
+
                   onPressed: (){
                     showDatePicker(
                         context: context,
