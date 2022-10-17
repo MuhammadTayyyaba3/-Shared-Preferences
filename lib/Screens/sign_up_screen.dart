@@ -102,20 +102,32 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
+              Container(
+                width: 320,
+                height: 60,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 1,
+                      color: Color(0xffA2B5BB),
+                    )
 
-              TextButton(
+                ),
+                child: Row(
+                  children: [
+                    TextButton(
+                        onPressed: (){
+                          showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(1950),
+                              lastDate: DateTime.now()
+                          );
+                        },
+                        child: const Icon(Icons.calendar_today_outlined,color: BGColor,)),
+                  ],
+                ),
 
-                  onPressed: (){
-                    showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(1950),
-                        lastDate: DateTime.now()
-                    );
-                  },
-                  child: const Icon(Icons.calendar_today_outlined)),
-              const SizedBox(
-                height: 30,
               ),
 
               ButtonDesign(btnText: 'Login',),
@@ -125,7 +137,7 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Don't have an account yet?"),
+                  const Text("Don't have an account?"),
                   const SizedBox(
                     width: 5,
                   ),
